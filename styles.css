@@ -1,0 +1,82 @@
+
+
+
+  :root {
+    --grid-gap: 15px;
+    --padding: 20px;
+    --primary-color: #D20062; /* Deep purple color */
+    --secondary-color: rgba(112, 109, 86, 0.16); /* Light blue for special items */
+    --tertiary-color: rgb(195, 195, 201); /* Soft peach color */
+    --header-color: rgb(66, 121, 70);
+}
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    grid-template-rows: repeat(5, auto); /* Five rows */
+    gap: var(--grid-gap);
+    padding: var(--padding);
+    font-family: 'Calibri', sans-serif;
+    background-color: #f4f4f4;
+    perspective: 500px; /* Adds perspective to the 3D effect */
+  }
+  .grid-header {
+    grid-column: 1 / -1; /* Span all columns */
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, color 0.3s ease; 
+  }
+  .grid-header:hover {
+    transform: scale(1.1); /* Slightly enlarges the header */
+    color: var(--header-color); /* Changes text color on hover */
+  }
+  .grid-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: var(--tertiary-color); /* Default background color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateZ(0); /* Prepares for 3D transformation */
+    box-shadow: 0 4px 8px rgba(72, 2, 2, 0.3); /* Adds depth with shadows */
+  }
+  
+  /* Hover effect for all items */
+ 
+
+   .item-4-7 {
+    grid-row: 3 / span 3; /* Spanning three rows */
+    grid-column: 1; /* Positioned in the first column */
+    background-color: var(--secondary-color); /* Light blue for merged item */
+  }
+.grid-item:nth-child(even) {
+  background-color: var(--secondary-color); /* Different color for even items */
+}
+.grid-item:nth-child(odd) {
+  background-color: var(--tertiary-color); /* Different color for even items */
+}
+
+ 
+
+  /* Hover effect for all items */
+  .grid-item:hover  {
+    background-color: rgb(74, 70, 74); /* Change color on hover */
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(108, 75, 75, 0.2);
+  }
+
+  ul.custom-list {
+    list-style-type: square; /* Changes bullet style to squares */
+    color: rgb(1, 1, 7);            /* Changes text color of the list */
+    padding-left: 30px;     /* Adds padding to the left of the list */
+  }
+
+  ul.custom-list li {
+    font-style: italic;     /* Makes list item text italic */
+    margin-bottom: 5px;     /* Adds space below each list item */
+  }
+
+
